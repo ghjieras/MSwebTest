@@ -1,3 +1,0 @@
-BN51 : TimeoutError: waiting for selector "#game canvas" failed: timeout 3000ms exceeded
-,BN48 : TimeoutError: waiting for selector "#game canvas" failed: timeout 30000ms exceeded
-,BN51 : TimeoutError: waiting for selector "#game canvas" failed: timeout 30000ms exceeded
