@@ -17,7 +17,8 @@ async function headless (userData, url, site) {
       args: [
         '--window-size=960,840'
       ],
-        headless: false
+      ignoreDefaultArgs: ['--disable-extensions'],
+      headless: false
         // headless: true
     });
     let pageArr = [] // 要開的tab陣列
