@@ -15,7 +15,7 @@ async function headless (userData, url, site) {
     // await console.log(userData.start)
     const browser = await puppeteer.launch({
       args: [
-        '--window-size=960,840'
+        '--disable-dev-shm-usage'
       ],
       ignoreDefaultArgs: ['--disable-extensions'],
       headless: false
