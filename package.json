@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "apt install libnss3-dev & apt-get install libxss1 & apt-get install libasound2",
     "start": "gulp AllGameTest"
   },
   "keywords": [],
