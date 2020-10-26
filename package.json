@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "gulp AllGameTest"
+    "test": "apt install libnss3-dev & apt-get install libxss1 & gulp AllGameTest"
   },
   "keywords": [],
   "author": "",
