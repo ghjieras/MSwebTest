@@ -11,5 +11,5 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
-            - run: ldd chrome | grep not
+            - run: yum update nss -y
       - run: npm run test
