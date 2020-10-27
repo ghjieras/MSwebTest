@@ -2,9 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@4.1.0
   python: circleci/python@1.2.0
-jobs:
-    steps:
-      - node/install:
-          steps:
-            - run: npm install
-            - run: npm run test
+workflows:
+  node-tests:
+    jobs:
+      - node/test
