@@ -9,7 +9,7 @@ const GameNum3 = require('./Variable/variable3').gameNum // 正式站
 let child = fork(path.join(__dirname, './controller.js'))
 var userData = {
    user: 'ttt004',
-   site: 3,
+   site: 1,
    lang: 1,
    total: GameNum3.length, // 根據目標站台
    tab: 10, //頁數

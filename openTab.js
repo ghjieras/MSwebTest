@@ -14,9 +14,6 @@ async function headless (userData, url, site) {
     await console.log(`${new Date().getHours()} : ${new Date().getMinutes()}`)
     // await console.log(userData.start)
     const browser = await puppeteer.launch({
-      args: [
-        '--disable-dev-shm-usage'
-      ],
       ignoreDefaultArgs: ['--disable-extensions'],
       headless: false
         // headless: true
@@ -38,10 +35,13 @@ async function headless (userData, url, site) {
       // console.log(GameNum[userData.start + i])
       await pageArr[i].click(GameNum[(Number(userData.start) + Number(i))])  // 點選遊戲
       await pageArr[i].waitFor(2000)
+      let gameNum = pageArr[i].mainFrame().url().split('/game/')[1]
+      console.log('GAMENUM: ',gameNum)
       let GameNumber = pageArr[i].mainFrame().url().split('/game/')[1].split('/?')[0] // 取得遊戲編號
+      console.log('GAMENUMBER: ',GameNumber)
       try {
         await pageArr[i].waitForSelector('#game canvas', {timeout: 3000})
-        await pageArr[i].waitFor(15000)
+        await pageArr[i].waitFor(16000)
       } catch (error) {
         if (error) {
           await fs.mkdir('./遊戲連結錯誤',async function () {
