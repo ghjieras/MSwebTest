@@ -1,4 +1,4 @@
-const {fork} = require('child_process')
+const { fork } = require('child_process')
 const child_process = require('child_process');
 const path = require('path')
 var sleep = require('sleep');
@@ -11,14 +11,12 @@ var userData = {
    user: 'ttt004',
    site: 1,
    lang: 1,
-   total: GameNum3.length, // 根據目標站台
+   total: GameNum1.length, // 根據目標站台
    tab: 10, //頁數
-   start: 0
+   start: 6
 };
 userData['gameNum'] = process.argv[2]
 // sleep.sleep(30)
 console.log(child.pid)
 
 child.send(userData)
-
-

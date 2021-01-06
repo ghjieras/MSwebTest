@@ -27,6 +27,10 @@ var gameNum = [
     'li:nth-child(22) > section > div',
     'li:nth-child(23) > section > div',
     'li:nth-child(24) > section > div',
-    'li:nth-child(25) > section > div' // BN50 宙斯
+    'li:nth-child(25) > section > div',
+    'li:nth-child(26) > section > div',
+    'li:nth-child(27) > section > div',
+    'li:nth-child(28) > section > div',
+    'li:nth-child(29) > section > div'
 ];
 exports.gameNum = gameNum;

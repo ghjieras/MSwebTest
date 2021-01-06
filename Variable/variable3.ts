@@ -1,4 +1,4 @@
-const gameNum:string[] = [
+const gameNum: string[] = [
     /** 正式站 */
     'li:nth-child(1) > section > div', // BN02 財神
     'li:nth-child(2) > section > div', // BN03 官將首
@@ -24,7 +24,11 @@ const gameNum:string[] = [
     'li:nth-child(21) > section > div', // BN38 超8
     'li:nth-child(22) > section > div', // BN39 皇冠列車
     'li:nth-child(23) > section > div', // BN40 赤壁
-    'li:nth-child(24) > section > div', // BN50 一條龍
-    'li:nth-child(25) > section > div'// BN54 宙斯
+    'li:nth-child(24) > section > div', // BN49 臥龍
+    'li:nth-child(25) > section > div', // BN50 一條龍
+    'li:nth-child(26) > section > div',// BN54 宙斯
+    'li:nth-child(27) > section > div', // BN35 鋼鐵俠
+    'li:nth-child(28) > section > div', // BN51 湖中女神
+    'li:nth-child(29) > section > div'
 ]
 export { gameNum }

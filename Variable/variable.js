@@ -31,6 +31,13 @@ var gameNum = [
     'li:nth-child(25) > section > div',
     'li:nth-child(26) > section > div',
     'li:nth-child(27) > section > div',
-    'li:nth-child(28) > section > div' // BN54
+    'li:nth-child(28) > section > div',
+    'li:nth-child(29) > section > div',
+    'li:nth-child(30) > section > div',
+    'li:nth-child(31) > section > div',
+    'li:nth-child(32) > section > div',
+    'li:nth-child(33) > section > div',
+    'li:nth-child(34) > section > div',
+    'li:nth-child(35) > section > div' // BN99 (魚)
 ];
 exports.gameNum = gameNum;
