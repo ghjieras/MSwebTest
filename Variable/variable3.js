@@ -1,8 +1,8 @@
 "use strict";
 exports.__esModule = true;
-exports.gameNum = void 0;
+exports.gameTypeBar = exports.gameNum = void 0;
 var gameNum = [
-    /** 正式站 */
+    /** 測試站(對外) */
     'li:nth-child(1) > section > div',
     'li:nth-child(2) > section > div',
     'li:nth-child(3) > section > div',
@@ -20,7 +20,6 @@ var gameNum = [
     'li:nth-child(15) > section > div',
     'li:nth-child(16) > section > div',
     'li:nth-child(17) > section > div',
-    // 'li:nth-child(18) > section > div', // BN19 寶石
     'li:nth-child(18) > section > div',
     'li:nth-child(19) > section > div',
     'li:nth-child(20) > section > div',
@@ -32,6 +31,14 @@ var gameNum = [
     'li:nth-child(26) > section > div',
     'li:nth-child(27) > section > div',
     'li:nth-child(28) > section > div',
-    'li:nth-child(29) > section > div'
+    'li:nth-child(29) > section > div',
+    'li:nth-child(30) > section > div',
+    'li:nth-child(31) > section > div',
+    'li:nth-child(32) > section > div'
 ];
 exports.gameNum = gameNum;
+var gameTypeBar = [
+    '#app > div.main div.swiper-slide.swiper-slide-next',
+    'div.swiper-slide:nth-child(3)' // 捕魚機
+];
+exports.gameTypeBar = gameTypeBar;

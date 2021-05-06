@@ -1,5 +1,5 @@
 const gameNum: string[] = [
-    /** 正式站 */
+    /** 測試站(對外) */
     'li:nth-child(1) > section > div', // BN02 財神
     'li:nth-child(2) > section > div', // BN03 官將首
     'li:nth-child(3) > section > div', // BN04 酒劍仙
@@ -17,18 +17,24 @@ const gameNum: string[] = [
     'li:nth-child(15) > section > div', // BN16 沐浴
     'li:nth-child(16) > section > div', // BN17 雷神
     'li:nth-child(17) > section > div', // BN18 公主
-    // 'li:nth-child(18) > section > div', // BN19 寶石
     'li:nth-child(18) > section > div', // BN21 名兵錄
-    'li:nth-child(19) > section > div', // BN36 埃及歷險
-    'li:nth-child(20) > section > div', // BN37 黑暗沙漠
-    'li:nth-child(21) > section > div', // BN38 超8
-    'li:nth-child(22) > section > div', // BN39 皇冠列車
-    'li:nth-child(23) > section > div', // BN40 赤壁
-    'li:nth-child(24) > section > div', // BN49 臥龍
-    'li:nth-child(25) > section > div', // BN50 一條龍
-    'li:nth-child(26) > section > div',// BN54 宙斯
-    'li:nth-child(27) > section > div', // BN35 鋼鐵俠
-    'li:nth-child(28) > section > div', // BN51 湖中女神
-    'li:nth-child(29) > section > div'
+    'li:nth-child(19) > section > div', // BN35 鋼鐵俠
+    'li:nth-child(20) > section > div', // BN36 埃及歷險
+    'li:nth-child(21) > section > div', // BN37 黑暗沙漠
+    'li:nth-child(22) > section > div', // BN38 超8
+    'li:nth-child(23) > section > div', // BN39 皇冠列車
+    'li:nth-child(24) > section > div', // BN40 赤壁
+    'li:nth-child(25) > section > div', // BN49 臥龍
+    'li:nth-child(26) > section > div', // BN50 一條龍
+    'li:nth-child(27) > section > div', // BN51 湖中女神
+    'li:nth-child(28) > section > div', // BN50 宙斯
+    'li:nth-child(29) > section > div',
+    'li:nth-child(30) > section > div',
+    'li:nth-child(31) > section > div',
+    'li:nth-child(32) > section > div'
 ]
-export { gameNum }
+const gameTypeBar: string[] = [
+    '#app > div.main div.swiper-slide.swiper-slide-next', // 老虎機
+    'div.swiper-slide:nth-child(3)' // 捕魚機
+]
+export { gameNum, gameTypeBar }

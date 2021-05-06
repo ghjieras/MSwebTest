@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-exports.gameNum = void 0;
+exports.gameTypeBar = exports.gameNum = void 0;
 // 遊戲編號與在大廳中相對應的element
 var gameNum = [
     /** 開發站 */
@@ -41,3 +41,8 @@ var gameNum = [
     'li:nth-child(35) > section > div' // BN99 (魚)
 ];
 exports.gameNum = gameNum;
+var gameTypeBar = [
+    '#app > div.main div.swiper-slide.swiper-slide-next',
+    'div.swiper-slide:nth-child(3)' // 捕魚機
+];
+exports.gameTypeBar = gameTypeBar;

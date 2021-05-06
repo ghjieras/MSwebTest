@@ -28,6 +28,13 @@ const gameNum: string[] = [
     'li:nth-child(26) > section > div', // BN50 一條龍
     'li:nth-child(27) > section > div', // BN51 湖中女神
     'li:nth-child(28) > section > div', // BN50 宙斯
-    'li:nth-child(29) > section > div'
+    'li:nth-child(29) > section > div',
+    'li:nth-child(30) > section > div',
+    'li:nth-child(31) > section > div',
+    'li:nth-child(32) > section > div'
 ]
-export { gameNum }
+const gameTypeBar: string[] = [
+    '#app > div.main div.swiper-slide.swiper-slide-next', // 老虎機
+    'div.swiper-slide:nth-child(3)' // 捕魚機
+]
+export { gameNum, gameTypeBar }

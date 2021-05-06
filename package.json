@@ -14,6 +14,7 @@
     "compass": "^0.1.1",
     "gulp-cli": "^2.3.0",
     "puppeteer": "^5.2.1",
+    "puppeteer-screen-recorder": "^1.1.9",
     "sleep": "^6.3.0"
   },
   "devDependencies": {

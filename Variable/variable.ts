@@ -37,5 +37,8 @@ const gameNum: string[] = [
     'li:nth-child(34) > section > div', // BN58 Carmilla The Vampire 血夜情人
     'li:nth-child(35) > section > div'  // BN99 (魚)
 ]
-
-export { gameNum }
+const gameTypeBar: string[] = [
+    '#app > div.main div.swiper-slide.swiper-slide-next', // 老虎機
+    'div.swiper-slide:nth-child(3)' // 捕魚機
+]
+export { gameNum, gameTypeBar }

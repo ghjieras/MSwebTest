@@ -3,9 +3,15 @@ const openTab = require('./openTab')
 const global = require('./Function/global');
 const callcall = require('./controller')
 const child_process = require('child_process');
-const { stdout } = require('process');
-const { STATUS_CODES } = require('http');
-const { task } = require('gulp');
+const {
+  stdout
+} = require('process');
+const {
+  STATUS_CODES
+} = require('http');
+const {
+  task
+} = require('gulp');
 const GameNum1 = require('./Variable/variable').gameNum // 開發站
 const GameNum2 = require('./Variable/variable2').gameNum // 測試站
 const GameNum3 = require('./Variable/variable3').gameNum // 正式站
@@ -21,7 +27,7 @@ let userData = {
 
 
 async function DevCn() {
-  userData['user'] = 'ttt001',
+  userData['user'] = 'auto001',
     userData['site'] = 1,
     userData['lang'] = 1,
     userData['total'] = GameNum1.length // 開發站DOM
@@ -33,7 +39,7 @@ async function DevCn() {
 
 
 async function DevEng() {
-  userData['user'] = 'ttt002',
+  userData['user'] = 'auto002',
     userData['site'] = 1,
     userData['lang'] = 2,
     userData['total'] = GameNum1.length // 開發站DOM
@@ -44,7 +50,7 @@ async function DevEng() {
 }
 
 async function DevVi() {
-  userData['user'] = 'ttt003',
+  userData['user'] = 'auto003',
     userData['site'] = 1,
     userData['lang'] = 3,
     userData['total'] = GameNum1.length // 開發站DOM
@@ -55,7 +61,7 @@ async function DevVi() {
 }
 
 async function DevTh() {
-  userData['user'] = 'ttt004',
+  userData['user'] = 'auto004',
     userData['site'] = 1,
     userData['lang'] = 4,
     userData['total'] = GameNum1.length // 開發站DOM
@@ -66,7 +72,7 @@ async function DevTh() {
 }
 
 async function DevKo() {
-  userData['user'] = 'ttt005',
+  userData['user'] = 'auto005',
     userData['site'] = 1,
     userData['lang'] = 5,
     userData['total'] = GameNum1.length // 開發站DOM
@@ -77,7 +83,7 @@ async function DevKo() {
 }
 
 async function DevId() {
-  userData['user'] = 'auto005',
+  userData['user'] = 'auto006',
     userData['site'] = 1,
     userData['lang'] = 6,
     userData['total'] = GameNum1.length // 開發站DOM
@@ -338,20 +344,20 @@ async function allTest() {
   //   taskName[4] = 'DevKo',
   //   taskName[5] = 'DevId'
 
-  // taskName[0] = 'TestCn',
-  //   taskName[1] = 'TestEng',
-  //   taskName[2] = 'TestVi',
-  //   taskName[3] = 'TestTh'
-  // taskName[4] = 'TestKo',
-  //   taskName[5] = 'TestId'
+  taskName[0] = 'TestCn',
+    taskName[1] = 'TestEng',
+    taskName[2] = 'TestVi',
+    taskName[3] = 'TestTh'
+  taskName[4] = 'TestKo',
+    taskName[5] = 'TestId'
 
 
-  taskName[0] = 'FormalCn',
-    taskName[1] = 'FormalEng',
-    taskName[2] = 'FormalVi',
-    taskName[3] = 'FormalTh'
-  taskName[4] = 'FormalKo',
-    taskName[5] = 'FormalId'
+  // taskName[0] = 'FormalCn',
+  //   taskName[1] = 'FormalEng',
+  //   taskName[2] = 'FormalVi',
+  //   taskName[3] = 'FormalTh'
+  // taskName[4] = 'FormalKo',
+  //   taskName[5] = 'FormalId'
 
 
   // taskName[0] = 'OtherCn',
@@ -363,7 +369,9 @@ async function allTest() {
 
 
   for (let i = 0; i < taskName.length; i++) {
-    child_process.exec('gulp ' + taskName[i], (error) => { console.log(error) })
+    child_process.exec('gulp ' + taskName[i], (error) => {
+      console.log(error)
+    })
   }
   thisTime = `${new Date().getHours()} : ${new Date().getMinutes()}`
 }

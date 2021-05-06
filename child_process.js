@@ -1,4 +1,6 @@
-const { fork } = require('child_process')
+const {
+   fork
+} = require('child_process')
 const child_process = require('child_process');
 const path = require('path')
 var sleep = require('sleep');
@@ -9,11 +11,11 @@ const GameNum3 = require('./Variable/variable3').gameNum // 正式站
 let child = fork(path.join(__dirname, './controller.js'))
 var userData = {
    user: 'ttt004',
-   site: 1,
+   site: 2,
    lang: 1,
-   total: GameNum1.length, // 根據目標站台
-   tab: 10, //頁數
-   start: 6
+   total: GameNum2.length, // 根據目標站台
+   tab: 1, //頁數
+   start: 18
 };
 userData['gameNum'] = process.argv[2]
 // sleep.sleep(30)
