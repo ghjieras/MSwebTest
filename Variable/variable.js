@@ -3,7 +3,7 @@ exports.__esModule = true;
 exports.gameTypeBar = exports.gameNum = void 0;
 // 遊戲編號與在大廳中相對應的element
 var gameNum = [
-    /** 開發站 */
+    /** QA站 */
     'li:nth-child(1) > section > div',
     'li:nth-child(2) > section > div',
     'li:nth-child(3) > section > div',
@@ -38,7 +38,8 @@ var gameNum = [
     'li:nth-child(32) > section > div',
     'li:nth-child(33) > section > div',
     'li:nth-child(34) > section > div',
-    'li:nth-child(35) > section > div' // BN99 (魚)
+    'li:nth-child(35) > section > div',
+    'li:nth-child(36) > section > div'
 ];
 exports.gameNum = gameNum;
 var gameTypeBar = [

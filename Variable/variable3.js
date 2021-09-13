@@ -2,7 +2,7 @@
 exports.__esModule = true;
 exports.gameTypeBar = exports.gameNum = void 0;
 var gameNum = [
-    /** 測試站(對外) */
+    /** 正式站 */
     'li:nth-child(1) > section > div',
     'li:nth-child(2) > section > div',
     'li:nth-child(3) > section > div',
@@ -34,7 +34,10 @@ var gameNum = [
     'li:nth-child(29) > section > div',
     'li:nth-child(30) > section > div',
     'li:nth-child(31) > section > div',
-    'li:nth-child(32) > section > div'
+    'li:nth-child(32) > section > div',
+    'li:nth-child(33) > section > div',
+    'li:nth-child(34) > section > div',
+    'li:nth-child(35) > section > div'
 ];
 exports.gameNum = gameNum;
 var gameTypeBar = [

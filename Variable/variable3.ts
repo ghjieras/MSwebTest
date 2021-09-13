@@ -1,5 +1,5 @@
 const gameNum: string[] = [
-    /** 測試站(對外) */
+    /** 正式站 */
     'li:nth-child(1) > section > div', // BN02 財神
     'li:nth-child(2) > section > div', // BN03 官將首
     'li:nth-child(3) > section > div', // BN04 酒劍仙
@@ -31,7 +31,10 @@ const gameNum: string[] = [
     'li:nth-child(29) > section > div',
     'li:nth-child(30) > section > div',
     'li:nth-child(31) > section > div',
-    'li:nth-child(32) > section > div'
+    'li:nth-child(32) > section > div',
+    'li:nth-child(33) > section > div',
+    'li:nth-child(34) > section > div',
+    'li:nth-child(35) > section > div'
 ]
 const gameTypeBar: string[] = [
     '#app > div.main div.swiper-slide.swiper-slide-next', // 老虎機

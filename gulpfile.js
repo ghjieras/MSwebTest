@@ -3,6 +3,9 @@ const openTab = require('./openTab')
 const global = require('./Function/global');
 const callcall = require('./controller')
 const child_process = require('child_process');
+const watcher = gulp.watch(['input/*.js'])
+
+
 const {
   stdout
 } = require('process');
@@ -14,36 +17,126 @@ const {
 } = require('gulp');
 const GameNum1 = require('./Variable/variable').gameNum // 開發站
 const GameNum2 = require('./Variable/variable2').gameNum // 測試站
-const GameNum3 = require('./Variable/variable3').gameNum // 正式站
+const GameNum3 = require('./Variable/variable3').gameNum; // 正式站
+const {
+  rejects
+} = require('assert');
+const {
+  copyFileSync
+} = require('fs');
 
 
 let userData = {
   user: '',
   site: 0,
+  operator_id: 22,
   total: '', // 根據目標站台
   tab: 5, //頁數
   start: 0 // 開始的陣列
 };
 
-
-async function DevCn() {
-  userData['user'] = 'auto001',
-    userData['site'] = 1,
+async function UATidrk001() {
+  userData['user'] = 'idrkAuto001',
+    userData['site'] = 3,
     userData['lang'] = 1,
+    userData['operator_id'] = 212,
     userData['total'] = GameNum1.length // 開發站DOM
-  var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang);
+  var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang, userData.operator_id, 0);
   await callcall.callcall(userData, url, userData.site).then(() => {
     return true
   })
 }
 
 
+async function UATidrk002() {
+  userData['user'] = 'idrkAuto002',
+    userData['site'] = 3,
+    userData['lang'] = 2,
+    userData['operator_id'] = 212,
+    userData['total'] = GameNum1.length // 開發站DOM
+  var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang, userData.operator_id, 0);
+  await callcall.callcall(userData, url, userData.site).then(() => {
+    return true
+  })
+}
+
+
+async function UATidrk003() {
+  userData['user'] = 'idrkAuto003',
+    userData['site'] = 3,
+    userData['lang'] = 3,
+    userData['operator_id'] = 212,
+    userData['total'] = GameNum1.length // 開發站DOM
+  var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang, userData.operator_id, 0);
+  await callcall.callcall(userData, url, userData.site).then(() => {
+    return true
+  })
+}
+
+async function UATidrk004() {
+  userData['user'] = 'idrkAuto004',
+    userData['site'] = 3,
+    userData['lang'] = 4,
+    userData['operator_id'] = 212,
+    userData['total'] = GameNum1.length // 開發站DOM
+  var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang, userData.operator_id, 0);
+  await callcall.callcall(userData, url, userData.site).then(() => {
+    return true
+  })
+}
+
+async function UATidrk005() {
+  userData['user'] = 'idrkAuto005',
+    userData['site'] = 3,
+    userData['lang'] = 5,
+    userData['operator_id'] = 212,
+    userData['total'] = GameNum1.length // 開發站DOM
+  var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang, userData.operator_id, 0);
+  await callcall.callcall(userData, url, userData.site).then(() => {
+    return true
+  })
+}
+
+async function UATidrk006() {
+  userData['user'] = 'idrkAuto006',
+    userData['site'] = 3,
+    userData['lang'] = 6,
+    userData['operator_id'] = 212,
+    userData['total'] = GameNum1.length // 開發站DOM
+  var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang, userData.operator_id, 0);
+  await callcall.callcall(userData, url, userData.site).then(() => {
+    return true
+  })
+}
+
+
+
+exports.UATidrk001 = UATidrk001
+exports.UATidrk002 = UATidrk002
+exports.UATidrk003 = UATidrk003
+exports.UATidrk004 = UATidrk004
+exports.UATidrk005 = UATidrk005
+exports.UATidrk006 = UATidrk006
+
+
+async function DevCn() {
+  userData['user'] = 'auto001',
+    userData['site'] = 1,
+    userData['lang'] = 1,
+    userData['operator_id'] = 16,
+    userData['total'] = GameNum1.length // 開發站DOM
+  var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang, userData.operator_id, 0);
+  await callcall.callcall(userData, url, userData.site).then(() => {
+    return true
+  })
+}
+
 async function DevEng() {
   userData['user'] = 'auto002',
     userData['site'] = 1,
     userData['lang'] = 2,
     userData['total'] = GameNum1.length // 開發站DOM
-  var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang);
+  var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang, userData.operator_id, 0);
   await callcall.callcall(userData, url, userData.site).then(() => {
     return true
   })
@@ -54,7 +147,7 @@ async function DevVi() {
     userData['site'] = 1,
     userData['lang'] = 3,
     userData['total'] = GameNum1.length // 開發站DOM
-  var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang);
+  var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang, userData.operator_id);
   await callcall.callcall(userData, url, userData.site).then(() => {
     return true
   })
@@ -65,7 +158,7 @@ async function DevTh() {
     userData['site'] = 1,
     userData['lang'] = 4,
     userData['total'] = GameNum1.length // 開發站DOM
-  var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang);
+  var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang, userData.operator_id);
   await callcall.callcall(userData, url, userData.site).then(() => {
     return true
   })
@@ -92,6 +185,7 @@ async function DevId() {
     return true
   })
 }
+
 exports.DevCn = DevCn
 exports.DevEng = DevEng
 exports.DevVi = DevVi
@@ -100,7 +194,7 @@ exports.DevKo = DevKo
 exports.DevId = DevId
 
 async function TestCn() {
-  userData['user'] = 'auto001',
+  userData['user'] = 'ttt001',
     userData['site'] = 2,
     userData['lang'] = 1,
     userData['total'] = GameNum2.length // 測試站DOM
@@ -111,7 +205,7 @@ async function TestCn() {
 }
 
 async function TestEng() {
-  userData['user'] = 'auto002',
+  userData['user'] = 'ttt002',
     userData['site'] = 2,
     userData['lang'] = 2,
     userData['total'] = GameNum2.length // 測試站DOM
@@ -122,7 +216,7 @@ async function TestEng() {
 }
 
 async function TestVi() {
-  userData['user'] = 'auto003',
+  userData['user'] = 'ttt003',
     userData['site'] = 2,
     userData['lang'] = 3,
     userData['total'] = GameNum2.length // 測試站DOM
@@ -133,7 +227,7 @@ async function TestVi() {
 }
 
 async function TestTh() {
-  userData['user'] = 'auto004',
+  userData['user'] = 'ttt004',
     userData['site'] = 2,
     userData['lang'] = 4,
     userData['total'] = GameNum2.length // 測試站DOM
@@ -145,7 +239,7 @@ async function TestTh() {
 }
 
 async function TestKo() {
-  userData['user'] = 'auto005',
+  userData['user'] = 'ttt005',
     userData['site'] = 2,
     userData['lang'] = 5,
     userData['total'] = GameNum2.length // 測試站DOM
@@ -157,7 +251,7 @@ async function TestKo() {
 }
 
 async function TestId() {
-  userData['user'] = 'ttt005',
+  userData['user'] = 'ttt006',
     userData['site'] = 2,
     userData['lang'] = 6,
     userData['total'] = GameNum2.length // 測試站DOM
@@ -260,6 +354,7 @@ async function OtherCn() {
     userData['lang'] = 1,
     userData['total'] = GameNum2.length // 測試站DOM
   var url = await global.getUrlFormAPI(userData.user, userData.site, 0, userData.lang);
+  console.log('url:' + url)
   await callcall.callcall(userData, url, userData.site).then(() => {
     return true
   })
@@ -333,31 +428,39 @@ exports.OtherId = OtherId
 
 let taskName = []
 
-
-
 async function allTest() {
 
-  // taskName[0] = 'DevCn',
-  //   taskName[1] = 'DevEng',
-  //   taskName[2] = 'DevVi',
-  //   taskName[3] = 'DevTh',
-  //   taskName[4] = 'DevKo',
-  //   taskName[5] = 'DevId'
 
-  taskName[0] = 'TestCn',
-    taskName[1] = 'TestEng',
-    taskName[2] = 'TestVi',
-    taskName[3] = 'TestTh'
-  taskName[4] = 'TestKo',
-    taskName[5] = 'TestId'
+  // taskName[0] = 'UATidrk001',
+  //   taskName[1] = 'UATidrk002',
+  //   taskName[2] = 'UATidrk003',
+  //   taskName[3] = 'UATidrk004',
+  //   taskName[4] = 'UATidrk005',
+  //   taskName[5] = 'UATidrk006'
 
 
-  // taskName[0] = 'FormalCn',
-  //   taskName[1] = 'FormalEng',
-  //   taskName[2] = 'FormalVi',
-  //   taskName[3] = 'FormalTh'
-  // taskName[4] = 'FormalKo',
-  //   taskName[5] = 'FormalId'
+
+  // taskName[0] = 'DevCn'
+  // taskName[1] = 'DevEng',
+  // taskName[2] = 'DevVi',
+  // taskName[3] = 'DevTh',
+  // taskName[4] = 'DevKo',
+  // taskName[5] = 'DevId'
+
+  // taskName[0] = 'TestCn',
+  //   taskName[1] = 'TestEng',
+  //   taskName[2] = 'TestVi',
+  //   taskName[3] = 'TestTh',
+  //   taskName[4] = 'TestKo',
+  //   taskName[5] = 'TestId'
+
+
+  taskName[0] = 'FormalCn',
+    taskName[1] = 'FormalEng',
+    taskName[2] = 'FormalVi',
+    taskName[3] = 'FormalTh',
+    taskName[4] = 'FormalKo',
+    taskName[5] = 'FormalId'
 
 
   // taskName[0] = 'OtherCn',
@@ -369,6 +472,8 @@ async function allTest() {
 
 
   for (let i = 0; i < taskName.length; i++) {
+    console.log('taskName.length: ' + taskName.length)
+    console.log('gulp ' + taskName[i])
     child_process.exec('gulp ' + taskName[i], (error) => {
       console.log(error)
     })
@@ -377,4 +482,5 @@ async function allTest() {
 }
 
 
+// watcher.on('change', allTest)
 exports.allTest = allTest

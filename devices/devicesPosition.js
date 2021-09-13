@@ -1,30 +1,44 @@
 module.exports = {
-  iPhone6: {
+  "iPhone6": {
     menu: {
-      x: 32,
-      y: 30
-    },
-    spin: {
-      x: 210,
+      x: 310,
       y: 630
     },
+    spin: {
+      x: 190,
+      y: 450
+    },
     detail: {
-      x: 260,
-      y: 20
+      x: 310,
+      y: 420
     }
   },
-  iPad: {
+  "iPad": {
     menu: {
-      x: 40,
-      y: 685
+      x: 620,
+      y: 910
     },
     spin: {
-      x: 725,
-      y: 489
+      x: 360,
+      y: 700
     },
     detail: {
       x: 40,
       y: 415
     }
-  }
+  },
+  "iPhone11ProMax": {
+    menu: {
+      x: 343,
+      y: 765
+    },
+    spin: {
+      x: 207,
+      y: 585
+    },
+    detail: {
+      x: 346,
+      y: 540
+    }
+  },
 }
